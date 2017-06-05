@@ -1,1 +1,3 @@
-# car_garage_simulator
+# Garage Simulator
+
+Implemented with C#.
