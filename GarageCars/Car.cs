@@ -11,15 +11,30 @@
     }
     public abstract class Car
     {
-        public string Name { get; set; }
-        public Color Color { get; set; }
-        public int FuelTank { get; set; }
+        private string name;
+        public string Name { get { return name; } }
+        private Color color;
+        public Color Color { get { return color; } }
+        private int fuelTank;
+        public int FuelTank { get { return fuelTank; } }
 
         protected Car(string name, Color color, int fuelTank)
         {
-            Name = name;
-            Color = color;
-            FuelTank = fuelTank;
+            this.name = name;
+            this.color = color;
+            this.fuelTank = fuelTank;
+        }
+        public void AddFuel(int addFuel)
+        {
+            fuelTank = FuelTank + addFuel < 100 ? FuelTank + addFuel : 100;
+        }
+        public void ChangeColor(Color newColor)
+        {
+            color = newColor;
+        }
+        public void ChangeName(string newName)
+        {
+            name = newName;
         }
         public override string ToString()
         {

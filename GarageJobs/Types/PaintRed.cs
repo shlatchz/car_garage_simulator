@@ -6,6 +6,6 @@ namespace GarageJobs.Types
     {
         private const string jobName = "Paint Red";
         public string GetJobName() => jobName;
-        public void Execute(Car car) => car.Color = Color.Red;
+        public void Execute(Car car) => car.ChangeColor(Color.Red);
     }
 }

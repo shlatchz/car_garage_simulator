@@ -6,6 +6,6 @@ namespace GarageJobs.Types
     {
         private const string jobName = "Rename to Lower Case";
         public string GetJobName() => jobName;
-        public void Execute(Car car) => car.Name = car.Name.ToLower();
+        public void Execute(Car car) => car.ChangeName(car.Name.ToLower());
     }
 }

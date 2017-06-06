@@ -6,6 +6,6 @@ namespace GarageJobs.Types
     {
         private const string jobName = "Fully Fuel Tank";
         public string GetJobName() => jobName;
-        public void Execute(Car car) => car.FuelTank = 100;
+        public void Execute(Car car) => car.AddFuel(100 - car.FuelTank);
     }
 }
